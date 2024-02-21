@@ -15,7 +15,7 @@ public class ConsoleInput implements DataInputInterface {
     public ArrayList<String> getAndValidateAllData() {
         ArrayList<String> data = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
-        DataValidationInterface validator;
+        DataValidationInterface validator = new DummyValidator();
         
         boolean moreData = true;
         do {

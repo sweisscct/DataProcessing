@@ -20,7 +20,7 @@ public class FileInput implements DataInputInterface {
         ArrayList<String> data = new ArrayList<>();
         try {
             BufferedReader br = new BufferedReader(new FileReader(filename));
-            DataValidationInterface validator;
+            DataValidationInterface validator = new DummyValidator();
             
             String line;
             while ( (line=br.readLine()) != null ) {
