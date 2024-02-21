@@ -4,10 +4,13 @@
  */
 package dataprocessing;
 
+import Interfaces.DataOutputInterface;
+import Interfaces.DataInputInterface;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 
 /**
  *
@@ -26,15 +29,12 @@ public class DataProcessing {
     Output data
     */
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        String filename = "file.txt";
-        BufferedReader br = new BufferedReader(new FileReader(filename));
+        DataInputInterface dataInput;
+        DataOutputInterface dataOutput;
         
-        String line;
-        while ( (line=br.readLine()) != null ) {
-            // Validation
-        }
-        
-        // Output
+        ArrayList<String> validatedData = dataInput.getAndValidateAllData();
+        dataOutput.outputAllData(validatedData);
+
     }
     
 }
