@@ -4,14 +4,10 @@
  */
 package dataprocessing;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author celeb
  */
-public interface DataInputInterface {
-//    public String getLine();
-    public ArrayList<String> getAndValidateAllData();
-    
+public interface DataValidationInterface {
+    public boolean validateLine(String line);
 }
