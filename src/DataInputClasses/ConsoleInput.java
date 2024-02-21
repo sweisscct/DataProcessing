@@ -22,10 +22,13 @@ public class ConsoleInput implements DataInputInterface {
         
         boolean moreData = true;
         do {
-            System.out.println("Please enter in some data:\n");
+            System.out.println("Please enter in some data.\nType \"exit\" when you are finished:");
             String line = sc.nextLine();
             if (validator.validateLine(line)) {
                 data.add(line);
+            }
+            if (line.toLowerCase().equals("exit") ) {
+                moreData = false;
             }
         } while (moreData);
         return data;
