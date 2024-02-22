@@ -15,11 +15,12 @@ import java.util.Scanner;
  * @author celeb
  */
 public class ConsoleInput implements DataInputInterface {
+
     public ArrayList<String> getAndValidateAllData() {
         ArrayList<String> data = new ArrayList<>();
         Scanner sc = new Scanner(System.in);
         DataValidationInterface validator = new DummyValidator();
-        
+
         boolean moreData = true;
         do {
             System.out.println("Please enter in some data.\nType \"exit\" when you are finished:");
@@ -27,7 +28,7 @@ public class ConsoleInput implements DataInputInterface {
             if (validator.validateLine(line)) {
                 data.add(line);
             }
-            if (line.toLowerCase().equals("exit") ) {
+            if (line.toLowerCase().equals("exit")) {
                 moreData = false;
             }
         } while (moreData);

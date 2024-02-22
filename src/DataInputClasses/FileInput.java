@@ -27,13 +27,15 @@ public class FileInput implements DataInputInterface {
             
             String line;
             while ( (line=br.readLine()) != null ) {
-                if (validator.validateLine(line)) {
-                    data.add(line);
+                  if (validator.validateLine(line)) {
+                                    data.add(line);
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
+        
         return data;
     }
 }

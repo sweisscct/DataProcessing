@@ -20,6 +20,8 @@ public class FileOutput implements DataOutputInterface {
         String filename = "output.txt";
         try {
             BufferedWriter bw = new BufferedWriter(new FileWriter(filename));
+            
+            // Enhanced for loop
             for (String line : data) {
                 bw.write(line);
                 bw.newLine();
@@ -28,5 +30,7 @@ public class FileOutput implements DataOutputInterface {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
+
     }
 }
