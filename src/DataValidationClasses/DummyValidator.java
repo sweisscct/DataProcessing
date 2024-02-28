@@ -4,6 +4,8 @@
  */
 package DataValidationClasses;
 
+//import DataInputClasses.ConsoleInput;
+//import Interfaces.DataInputInterface;
 import Interfaces.DataValidationInterface;
 
 /**
@@ -11,7 +13,7 @@ import Interfaces.DataValidationInterface;
  * @author celeb
  */
 public class DummyValidator implements DataValidationInterface {
-
+    
     @Override
     public boolean validateLine(String line) {
         return true;
