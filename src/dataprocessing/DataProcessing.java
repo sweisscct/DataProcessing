@@ -87,7 +87,15 @@ public class DataProcessing {
             }
         } while (!validOption);
         
+        /*
+        Exercise!
         
+        1) Create a DataOutputFactory and refactor main to make use of it
+        
+        2) Move the data input menu to its own class
+        
+        3) Make a data output menu
+        */
         
         DataInputInterface dataInput = DataInputFactory.makeDataInput(inputType);
         DataOutputInterface dataOutput = new FileOutput();
