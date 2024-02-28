@@ -7,6 +7,7 @@ package dataprocessing;
 import DataInputClasses.ConsoleInput;
 import DataInputClasses.DataInputFactory;
 import DataInputClasses.FileInput;
+import DataOutputClasses.DataOutputFactory;
 import DataOutputClasses.FileOutput;
 import Interfaces.DataOutputInterface;
 import Interfaces.DataInputInterface;
@@ -54,6 +55,7 @@ public class DataProcessing {
 //            System.out.println(numbers[number]);
 //        }
         String inputType;
+        String outputType;
         boolean validOption = false;
         
         Scanner sc = new Scanner(System.in);
@@ -98,7 +100,7 @@ public class DataProcessing {
         */
         
         DataInputInterface dataInput = DataInputFactory.makeDataInput(inputType);
-        DataOutputInterface dataOutput = new FileOutput();
+        DataOutputInterface dataOutput = DataOutputFactory.makeDataOutput(outputType);
         
         ArrayList<String> validatedData = dataInput.getAndValidateAllData();
         dataOutput.outputAllData(validatedData);
