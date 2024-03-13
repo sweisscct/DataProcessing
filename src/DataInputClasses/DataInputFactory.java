@@ -11,17 +11,25 @@ import Interfaces.DataInputInterface;
  * @author celeb
  */
 public class DataInputFactory {
-    public static DataInputInterface makeDataInput(String inputType) {
-        switch (inputType) {
-            case "Console": {
-                return new ConsoleInput();
-            }
-            case "File": {
-                return new FileInput();
-            }
-            default: {
-                return null;
-            }
-        }            
+    public static DataInputInterface makeDataInput(DataInputTypes inputType) {
+//        switch (inputType) {
+//            case CONSOLE : {
+//                return new ConsoleInput();
+//            }
+//            case FILE: {
+//                return new FileInput();
+//            }
+//            case DATABASE: {
+//                return new DatabaseInput();
+//            }
+//            default: {
+//                return null;
+//            }
+//        } 
+          if (inputType == null) {
+              System.out.println("WARNING - INVALID INPUT TYPE");
+              return null;
+          }
+          return inputType.getInput();
     }
 }

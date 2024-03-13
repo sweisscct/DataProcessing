@@ -6,9 +6,11 @@
             <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/DataValidationClasses/DummyValidator.java</file>
             <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/DataOutputClasses/FileOutput.java</file>
             <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/Interfaces/DataValidationInterface.java</file>
+            <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/DataOutputClasses/DataOutputFactory.java</file>
             <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/DataInputClasses/ConsoleInput.java</file>
             <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/dataprocessing/DataProcessing.java</file>
             <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/DataInputClasses/FileInput.java</file>
+            <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/DataInputClasses/DataInputFactory.java</file>
             <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/Interfaces/DataInputInterface.java</file>
             <file>file:/C:/Users/celeb/Documents/NetBeansProjects/DataProcessing/src/Interfaces/DataOutputInterface.java</file>
         </group>

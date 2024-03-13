@@ -6,6 +6,7 @@ package dataprocessing;
 
 import DataInputClasses.ConsoleInput;
 import DataInputClasses.DataInputFactory;
+import DataInputClasses.DataInputTypes;
 import DataInputClasses.FileInput;
 import DataOutputClasses.DataOutputFactory;
 import DataOutputClasses.FileOutput;
@@ -35,7 +36,9 @@ public class DataProcessing {
     Output data
     */
     public static void main(String[] args) throws FileNotFoundException, IOException {
-        
+        for (DataInputTypes input : DataInputTypes.values()) {
+            System.out.println(input);
+        }
 //        int[] numbers = {3, 6, 2, 56, 34, 4};
         
         /*
@@ -70,23 +73,38 @@ public class DataProcessing {
                 System.out.println("Goodbye");
                 System.exit(0);
             }
-            try {
-                int optionNum = Integer.parseInt(userInput);
-                if (optionNum == 1) {
-                    inputType = "Console";
-                    validOption = true;
-                } else if (optionNum == 2) {
-                    inputType = "File";
-                    validOption = true;
-                } else {
-                    System.out.println("Please select a valid number");
-                    inputType = "none";
-                }
-                
-            } catch (Exception e) {
-                System.out.println("Please enter a number or \"Exit\"");
-                inputType = "none";
-            }
+//            MainMenuOptions option = MainMenuOptions
+//            switch (option) {
+//                case FILE: {
+//                    System.out.println("File");
+//                }
+//                case CONSOLE: {
+//                    System.out.println("Conosle");
+//                }
+//                case DATABASE: {
+//                    System.out.println("DB"); 
+//                }
+//                case EXIT: {
+//                    System.out.println("EXIT");
+//                }
+//            } 
+//            try {
+//                int optionNum = Integer.parseInt(userInput);
+//                if (optionNum == 1) {
+//                    inputType = "Console";
+//                    validOption = true;
+//                } else if (optionNum == 2) {
+//                    inputType = "File";
+//                    validOption = true;
+//                } else {
+//                    System.out.println("Please select a valid number");
+//                    inputType = "none";
+//                }
+//                
+//            } catch (Exception e) {
+//                System.out.println("Please enter a number or \"Exit\"");
+//                inputType = "none";
+//            }
         } while (!validOption);
         
         /*
@@ -99,11 +117,11 @@ public class DataProcessing {
         3) Make a data output menu
         */
         
-        DataInputInterface dataInput = DataInputFactory.makeDataInput(inputType);
-        DataOutputInterface dataOutput = DataOutputFactory.makeDataOutput(outputType);
+//        DataInputInterface dataInput = DataInputFactory.makeDataInput(inputType);
+//        DataOutputInterface dataOutput = DataOutputFactory.makeDataOutput(outputType);
         
-        ArrayList<String> validatedData = dataInput.getAndValidateAllData();
-        dataOutput.outputAllData(validatedData);
+//        ArrayList<String> validatedData = dataInput.getAndValidateAllData();
+//        dataOutput.outputAllData(validatedData);
     }
     
 }
